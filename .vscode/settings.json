@@ -1,0 +1,11 @@
+{
+    "Lua.diagnostics.globals": [
+        "json",
+        "luas",
+        "info",
+        "pkgsloc"
+    ],
+    "Lua.diagnostics.disable": [
+        "lowercase-global"
+    ]
+}

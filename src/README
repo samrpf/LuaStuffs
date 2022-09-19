@@ -1,0 +1,20 @@
+This folder is full of packages, modules, options, scripts, and your package manager.
+
+Directory structure:
+- alone: standalone modules
+- pkgs: packages
+    - *: each package gets its own folder
+        - *.lua: modules are stored inside
+- scripts: scripts are small files that do very basic tasks; installed by default with any modules that uses them; scripts are hidden from the user
+    - testing.rb: a basic Ruby script
+- bin: a version of scripts but precompiled
+- data: folder of many, many json files
+    - hashpref.json: includes preferences which are used by modules; information includes favourite editors, chosen name, operating system, and scripts installed
+    - *.json: any module is allowed to create datafiles inside the data folder, but it is recommended that preference datafiles be stored in hashpref.json if possible
+- alone.json: includes information for standalone files
+- pkgs.json: includes information for installed packages
+- luas.json: includes private preferences which are only to be used by LuaStuffs main app; information includes preferred package manager, preferred settings panel, location of important files, preferred index to install packages from, and shortcut information
+- pkgman.lua: default package manager for LuaStuffs
+- index.json: this file is not always available, as it is installed by the package manager during use and deleted after use. it contains information about every package available from luas-pkgs and information about how to install them. when the package manager is closed, the file is deleted to save space on the hard drive.
+- alone.#: contains information about how standalone modules should be formatted in alone.json
+- pkgs.#: contains information about how packages should be formatted in pkgs.json
