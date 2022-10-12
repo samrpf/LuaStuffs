@@ -6,7 +6,7 @@ Directory structure:
     - *: each package gets its own folder
         - *.lua: modules are stored inside
 - scripts: scripts are small files that do very basic tasks; installed by default with any modules that uses them; scripts are hidden from the user
-    - testing.rb: a basic Ruby script
+    - testing.lua: a basic lua script
 - bin: a version of scripts but precompiled
 - data: folder of many, many json files
     - hashpref.json: includes preferences which are used by modules; information includes favourite editors, chosen name, operating system, and scripts installed

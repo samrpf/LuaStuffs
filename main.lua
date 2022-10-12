@@ -13,25 +13,27 @@ info = json.decode(luas:read())
 luas:close()
 
 -- get package information
-pkgsloc = info["pkgs"][1]
-pkgfloc = info["pkgs"][2]
-alonesloc = info["alone"][1]
-alonefloc = info["alone"][2]
+pkgsloc = info["pkgs"][1] -- pkgs folder location
+pkgfloc = info["pkgs"][2] -- pkgs.json file location
+alonesloc = info["alone"][1] -- alone folder location
+alonefloc = info["alone"][2] -- alone.json file location
 
 -- turn package information into tables
+--- get pkg.json
 pkgfile = io.open(pkgfloc)
 pkgf = json.decode(pkgfile:read())
 pkgfile:close()
-
+--- get alone.json
 alonefile = io.open(alonefloc)
 alonef = json.decode(alonefile:read())
 alonefile:close()
 
+-- BEGIN --
 print("/ LuaStuffs /")
 print("Copyright (c) 2022 samr")
-print(pkgf["count"] .. " packages loaded")
+print(pkgf["count"] .. " packages loaded") -- print package count
 print("Welcome, " .. info["uname"] .. "!")
-print()
+print() -- newline
 
 -- Options
 print("Choose an option: ")
@@ -51,13 +53,13 @@ print("[x] LuaStuffs Manager")
 print("[y] Preferences")
 print("[z] Exit")
 print()
-local opt = io.read("*l")
+local opt = io.read("*l") -- get user option
 
 if opt == "x" then
     os.execute("lua " .. info["pkgman"])
 elseif opt == "y" then
     os.execute("lua " .. info["pref"])
-elseif opt == "z" then else
+elseif opt == "z" then --[[ do nothing and exit program ]] else
     --[[
     for i, shortcut in ipairs(shortcuts) do
         if opt == i then

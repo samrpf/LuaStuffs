@@ -9,6 +9,7 @@ luas = io.open("src/luas.json", "r")
 info = json.decode(luas:read())
 luas:close()
 
+-- BEGIN --
 print("=== Package Manager ===")
 print("Getting package index...")
 -- -- Getting index file
@@ -18,7 +19,7 @@ print("Getting package index...")
 ixfile = io.open("src/index.json")
 ix = json.decode(ixfile:read())
 ixfile:close()
-print("Fetched revision " .. ix["rev"])
+print("Fetched revision " .. ix["rev"]) -- print index revision number
 
 print("The Good Stuff")
 --[[ for loop here
