@@ -1,5 +1,5 @@
 # LuaStuffs
-Small Lua tools to help get basic stuff done so that you can focus on the bigger things.
+Small Lua tools to help get small stuff done so that you can focus on the bigger things.
 
 ## Dependencies
 LuaStuffs requires the following luarocks:
